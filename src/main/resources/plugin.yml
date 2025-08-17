@@ -1,0 +1,11 @@
+name: CMIKits
+version: '1.0.0'
+main: me.seetch.cmikits.CMIKits
+api-version: '1.21'
+authors:
+  - seetch
+depend:
+  - CMI
+  - CMILib
+commands:
+  kits: { }

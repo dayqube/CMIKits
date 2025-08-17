@@ -1,0 +1,49 @@
+menus:
+  kits:
+    # Title of the kits menu
+    title: "&6Available Kits"
+    # Rows of the menu (1-6)
+    size: 6
+    # Pattern for kits placement
+    # X - kit, - - empty
+    pattern:
+      - "---------"
+      - "---------"
+      - "--XXXXX--"
+      - "--XXXXX--"
+      - "---------"
+      - "---------"
+
+    # Item settings for kits
+    kit-item:
+      name: "&e%kit%"
+      lore:
+        - "&f"
+        - "&eClick to preview"
+
+  preview:
+    # Title of preview menu
+    title: "&0%kit%"
+    size: 6
+    # Pattern for kit preview
+    # X - items, H - main hand, O - offhand
+    # A - back button, B - get kit
+    # 1/2/3/4 - armor slots
+    pattern:
+      - "1234---HO"
+      - "XXXXXXXXX"
+      - "XXXXXXXXX"
+      - "XXXXXXXXX"
+      - "---------"
+      - "--A---B--"
+
+    # Button settings
+    buttons:
+      back:
+        name: "&cBack"
+        lore:
+          - "&7Return to kits"
+      claim:
+        name: "&aClaim Kit"
+        lore:
+          - "&7Click to receive this kit"
