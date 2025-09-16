@@ -31,6 +31,7 @@ public class KitPreviewMenu {
                 .title(Component.text(ColorUtil.colorize(plugin.getMenuConfig().getTitle("preview")
                         .replace("%kit%", kit.getDisplayName()))))
                 .rows(plugin.getMenuConfig().getSize("preview"))
+                .disableAllInteractions()
                 .create();
 
         setupItems();
@@ -59,7 +60,7 @@ public class KitPreviewMenu {
                 switch (c) {
                     case 'X':
                         if (itemSlotCounter < kitItems.size()) {
-                            gui.setItem(slot, ItemBuilder.from(kitItems.get(itemSlotCounter++)).asGuiItem());
+                            gui.setItem(slot, ItemBuilder.from(kitItems.get(itemSlotCounter++).clone()).asGuiItem());
                         }
                         break;
                     case 'H':
@@ -107,7 +108,7 @@ public class KitPreviewMenu {
         for (ItemStack item : kit.getItems()) {
             if (item != null && item.getType() != Material.AIR) {
                 if (slot >= gui.getRows() * 9) break;
-                gui.setItem(slot++, ItemBuilder.from(item).asGuiItem());
+                gui.setItem(slot++, ItemBuilder.from(item.clone()).asGuiItem());
             }
         }
 
@@ -119,42 +120,42 @@ public class KitPreviewMenu {
     private void addMainHand(int slot) {
         ItemStack item = kit.getExtraItem(player, CMIPlayerInventory.CMIInventorySlot.MainHand);
         if (item != null && item.getType() != Material.AIR) {
-            gui.setItem(slot, ItemBuilder.from(item).asGuiItem());
+            gui.setItem(slot, ItemBuilder.from(item.clone()).asGuiItem());
         }
     }
 
     private void addOffHand(int slot) {
         ItemStack item = kit.getExtraItem(player, CMIPlayerInventory.CMIInventorySlot.OffHand);
         if (item != null && item.getType() != Material.AIR) {
-            gui.setItem(slot, ItemBuilder.from(item).asGuiItem());
+            gui.setItem(slot, ItemBuilder.from(item.clone()).asGuiItem());
         }
     }
 
     private void addHelmet(int slot) {
         ItemStack item = kit.getExtraItem(player, CMIPlayerInventory.CMIInventorySlot.Helmet);
         if (item != null && item.getType() != Material.AIR) {
-            gui.setItem(slot, ItemBuilder.from(item).asGuiItem());
+            gui.setItem(slot, ItemBuilder.from(item.clone()).asGuiItem());
         }
     }
 
     private void addChestplate(int slot) {
         ItemStack item = kit.getExtraItem(player, CMIPlayerInventory.CMIInventorySlot.ChestPlate);
         if (item != null && item.getType() != Material.AIR) {
-            gui.setItem(slot, ItemBuilder.from(item).asGuiItem());
+            gui.setItem(slot, ItemBuilder.from(item.clone()).asGuiItem());
         }
     }
 
     private void addLeggings(int slot) {
         ItemStack item = kit.getExtraItem(player, CMIPlayerInventory.CMIInventorySlot.Pants);
         if (item != null && item.getType() != Material.AIR) {
-            gui.setItem(slot, ItemBuilder.from(item).asGuiItem());
+            gui.setItem(slot, ItemBuilder.from(item.clone()).asGuiItem());
         }
     }
 
     private void addBoots(int slot) {
         ItemStack item = kit.getExtraItem(player, CMIPlayerInventory.CMIInventorySlot.Boots);
         if (item != null && item.getType() != Material.AIR) {
-            gui.setItem(slot, ItemBuilder.from(item).asGuiItem());
+            gui.setItem(slot, ItemBuilder.from(item.clone()).asGuiItem());
         }
     }
 

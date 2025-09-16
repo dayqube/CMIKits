@@ -63,7 +63,7 @@ public class KitsMenu {
         List<String> lore = kitItemSection.getStringList("lore").stream()
                 .map(line -> line.replace("%kit%", kit.getDisplayName())).toList();
 
-        return ItemBuilder.from(kit.getSafeIcon())
+        return ItemBuilder.from(kit.getSafeIcon().clone())
                 .setName(ColorUtil.colorize(name))
                 .setLore(lore.stream().map(ColorUtil::colorize).collect(Collectors.toList()))
                 .flags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_ENCHANTS)
