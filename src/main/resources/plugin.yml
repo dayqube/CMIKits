@@ -6,6 +6,12 @@ authors:
   - seetch
 depend:
   - CMI
-  - CMILib
 commands:
-  kits: { }
+  kits:
+    description: Просмотреть все стартовый наборы CMI
+    usage: /kits [kit]
+    permission: kits.use
+permissions:
+  kits.use:
+    description: Позволяет использовать команду для себя
+    default: true

@@ -49,7 +49,7 @@ public class KitPreviewMenu {
     private void applyPattern(List<String> pattern) {
         List<ItemStack> kitItems = kit.getItems().stream()
                 .filter(item -> item != null && item.getType() != Material.AIR)
-                .collect(Collectors.toList());
+                .toList();
 
         for (int row = 0; row < pattern.size(); row++) {
             String rowPattern = pattern.get(row);
