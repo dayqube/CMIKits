@@ -16,6 +16,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class KitsMenu {
+
     private final CMIKits plugin;
     private final Player player;
     private final Gui gui;
@@ -36,7 +37,6 @@ public class KitsMenu {
         List<String> pattern = plugin.getMenuConfig().getPattern("kits");
 
         if (!pattern.isEmpty()) {
-            // Apply pattern
             int kitIndex = 0;
             Kit[] kits = kitMap.values().toArray(new Kit[0]);
 
@@ -49,7 +49,6 @@ public class KitsMenu {
                 }
             }
         } else {
-            // Fallback to adding items sequentially
             for (Kit kit : kitMap.values()) {
                 gui.addItem(createKitItem(kit));
             }

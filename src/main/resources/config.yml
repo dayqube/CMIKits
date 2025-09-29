@@ -42,8 +42,8 @@ menus:
       back:
         name: "&cBack"
         lore:
-          - "&7Return to kits"
+          - "&7Return to kits list"
       claim:
-        name: "&aClaim Kit"
+        name: "&aGet Kit"
         lore:
           - "&7Click to receive this kit"

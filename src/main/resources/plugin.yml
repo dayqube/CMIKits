@@ -1,17 +1,17 @@
 name: CMIKits
 version: '${pom.version}'
 main: me.seetch.cmikits.CMIKits
-api-version: '1.21'
+api-version: '1.20'
 authors:
   - seetch
 depend:
   - CMI
 commands:
   kits:
-    description: Просмотреть все стартовый наборы CMI
+    description: View all CMI starter kits
     usage: /kits [kit]
     permission: kits.use
 permissions:
   kits.use:
-    description: Позволяет использовать команду для себя
+    description: Allows using the command for yourself
     default: true
