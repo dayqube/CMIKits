@@ -27,6 +27,7 @@ public class KitsMenu {
         this.gui = Gui.gui()
                 .title(Component.text(ColorUtil.colorize(plugin.getMenuConfig().getTitle("kits"))))
                 .rows(plugin.getMenuConfig().getSize("kits"))
+                .disableAllInteractions()
                 .create();
 
         setupItems();
