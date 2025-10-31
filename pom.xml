@@ -6,7 +6,7 @@
 
     <groupId>me.seetch</groupId>
     <artifactId>CMIKits</artifactId>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
     <packaging>jar</packaging>
 
     <name>CMIKits</name>
@@ -56,9 +56,9 @@
             <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
         </repository>
         <repository>
-            <id>deban-releases</id>
-            <name>daycube</name>
-            <url>https://deban.ru/releases</url>
+            <id>endchest-releases</id>
+            <name>endchest</name>
+            <url>https://repo.endchest.ru/releases</url>
         </repository>
     </repositories>
 
@@ -91,7 +91,7 @@
         <dependency>
             <groupId>su.daycube</groupId>
             <artifactId>ColorUtil</artifactId>
-            <version>1.2.0</version>
+            <version>1.1.0</version>
         </dependency>
     </dependencies>
 </project>
